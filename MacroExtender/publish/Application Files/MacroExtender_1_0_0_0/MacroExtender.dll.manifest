@@ -1,0 +1,128 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
+  <asmv1:assemblyIdentity name="MacroExtender.dll" version="1.0.0.0" publicKeyToken="9391e896d787c59d" language="neutral" processorArchitecture="msil" type="win32" />
+  <description xmlns="urn:schemas-microsoft-com:asm.v1">MacroExtender</description>
+  <application />
+  <entryPoint>
+    <co.v1:customHostSpecified />
+  </entryPoint>
+  <trustInfo>
+    <security>
+      <applicationRequestMinimum>
+        <PermissionSet Unrestricted="true" ID="Custom" SameSite="site" />
+        <defaultAssemblyRequest permissionSetReference="Custom" />
+      </applicationRequestMinimum>
+      <requestedPrivileges xmlns="urn:schemas-microsoft-com:asm.v3">
+        <!--
+          UAC Manifest Options
+          If you want to change the Windows User Account Control level replace the 
+          requestedExecutionLevel node with one of the following.
+
+        <requestedExecutionLevel  level="asInvoker" uiAccess="false" />
+        <requestedExecutionLevel  level="requireAdministrator" uiAccess="false" />
+        <requestedExecutionLevel  level="highestAvailable" uiAccess="false" />
+
+         If you want to utilize File and Registry Virtualization for backward 
+         compatibility then delete the requestedExecutionLevel node.
+    -->
+        <requestedExecutionLevel level="asInvoker" uiAccess="false" />
+      </requestedPrivileges>
+    </security>
+  </trustInfo>
+  <dependency>
+    <dependentOS>
+      <osVersionInfo>
+        <os majorVersion="5" minorVersion="1" buildNumber="2600" servicePackMajor="0" />
+      </osVersionInfo>
+    </dependentOS>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Windows.CommonLanguageRuntime" version="4.0.30319.0" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.Common" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.Excel" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.Office.Tools.v4.0.Framework" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="Microsoft.VisualStudio.Tools.Applications.Runtime" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="preRequisite" allowDelayedBinding="true">
+      <assemblyIdentity name="stdole" version="7.0.3300.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" />
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="MacroExtender.dll" size="69120">
+      <assemblyIdentity name="MacroExtender" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>2g7M+gx7Mx6xV9N6gOG1CqMMFdA=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <dependency>
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="Microsoft.Office.Tools.Common.v4.0.Utilities.dll" size="32664">
+      <assemblyIdentity name="Microsoft.Office.Tools.Common.v4.0.Utilities" version="10.0.0.0" publicKeyToken="B03F5F7F11D50A3A" language="neutral" processorArchitecture="msil" />
+      <hash>
+        <dsig:Transforms>
+          <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
+        </dsig:Transforms>
+        <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" />
+        <dsig:DigestValue>CtnCtseaMyfROIGe0ENdGO6arHg=</dsig:DigestValue>
+      </hash>
+    </dependentAssembly>
+  </dependency>
+  <vstav3:addIn xmlns:vstav3="urn:schemas-microsoft-com:vsta.v3">
+    <vstav3:entryPointsCollection>
+      <vstav3:entryPoints>
+        <vstav3:entryPoint class="MacroExtender.ThisAddIn">
+          <assemblyIdentity name="MacroExtender" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
+        </vstav3:entryPoint>
+      </vstav3:entryPoints>
+    </vstav3:entryPointsCollection>
+    <vstav3:update enabled="true" />
+    <vstav3:application>
+      <vstov4:customizations xmlns:vstov4="urn:schemas-microsoft-com:vsto.v4">
+        <vstov4:customization>
+          <vstov4:appAddIn application="Excel" loadBehavior="3" keyName="MacroExtender">
+            <vstov4:friendlyName>MacroExtender</vstov4:friendlyName>
+            <vstov4:description>MacroExtender</vstov4:description>
+            <vstov4.1:ribbonTypes xmlns:vstov4.1="urn:schemas-microsoft-com:vsto.v4.1">
+              <vstov4.1:ribbonType name="MacroExtender.MacroExtenderRibbon, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.InteractiveFormatting, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.MethodFormatting, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.Template, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.EngineBase, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.ApplicationEngine, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.WorkbookEngine, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+              <vstov4.1:ribbonType name="MacroExtender.WorksheetEngine, MacroExtender, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
+            </vstov4.1:ribbonTypes>
+          </vstov4:appAddIn>
+        </vstov4:customization>
+      </vstov4:customizations>
+    </vstav3:application>
+  </vstav3:addIn>
+<publisherIdentity name="CN=SSIDOM\rmatton" issuerKeyHash="a2515e862929aec8e954570985eece2451c56586" /><Signature Id="StrongNameSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>sa8k8hOIoGORO0sdkOM8A3awPXU=</DigestValue></Reference></SignedInfo><SignatureValue>NFeS+9TatLmN7jyiupP25pJmtO8SJCdlanh2qOWBiwp2xJ7SljFhIjGBeFLRox9gbcbVXucVmCiQ2qwOUG78fXgYabApO9OKZPc5gWCV6AqGS7R7ISOB1+rsX3OnNlpNj2iaWtszHDIgCJVNnGC2GU06tyNFeqZBqAgU7JArsFc=</SignatureValue><KeyInfo Id="StrongNameKeyInfo"><KeyValue><RSAKeyValue><Modulus>rWI8RZL5iL6YO5aiD2f8+5Z2h/DeWBQgHiFGGjmg6qjOkoPSIrHo54ITHMGbVoAfuj0HDJeZpcMxFvcqUF2gqdWdeE+kiRTDWGQhC/HHpvI+cvxC6XMnkUYuoBChZW1znwSBtdcqEn8NDf2IeWqmlCDlCpa4VivUENu5khut6t0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><msrel:RelData xmlns:msrel="http://schemas.microsoft.com/windows/rel/2005/reldata"><r:license xmlns:r="urn:mpeg:mpeg21:2003:01-REL-R-NS" xmlns:as="http://schemas.microsoft.com/windows/pki/2005/Authenticode"><r:grant><as:ManifestInformation Hash="753db076033ce3901d4b3b9163a08813f224afb1" Description="" Url=""><as:assemblyIdentity name="MacroExtender.dll" version="1.0.0.0" publicKeyToken="9391e896d787c59d" language="neutral" processorArchitecture="msil" type="win32" /></as:ManifestInformation><as:SignedBy /><as:AuthenticodePublisher><as:X509SubjectName>CN=SSIDOM\rmatton</as:X509SubjectName></as:AuthenticodePublisher></r:grant><r:issuer><Signature Id="AuthenticodeSignature" xmlns="http://www.w3.org/2000/09/xmldsig#"><SignedInfo><CanonicalizationMethod Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /><SignatureMethod Algorithm="http://www.w3.org/2000/09/xmldsig#rsa-sha1" /><Reference URI=""><Transforms><Transform Algorithm="http://www.w3.org/2000/09/xmldsig#enveloped-signature" /><Transform Algorithm="http://www.w3.org/2001/10/xml-exc-c14n#" /></Transforms><DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha1" /><DigestValue>OiqyJQh+/XMfZ+hTLuzqwO9MLys=</DigestValue></Reference></SignedInfo><SignatureValue>hggc+sb7h0PBc6G2sjrZzT+x0Jue75vMx8mtpRYrh9ZN/eIpQMCQLc9sLmdFW+1Oy5TFCOwqd6U8N60XTrq9gIF2D+p+pWgXdEqB7AuogxAuK8RAn1rzS6K+g7nn/vPjctcL9vMB+LeCRkro5c2P1Pk+aHwl3Y3CCDGmICKMguM=</SignatureValue><KeyInfo><KeyValue><RSAKeyValue><Modulus>rWI8RZL5iL6YO5aiD2f8+5Z2h/DeWBQgHiFGGjmg6qjOkoPSIrHo54ITHMGbVoAfuj0HDJeZpcMxFvcqUF2gqdWdeE+kiRTDWGQhC/HHpvI+cvxC6XMnkUYuoBChZW1znwSBtdcqEn8NDf2IeWqmlCDlCpa4VivUENu5khut6t0=</Modulus><Exponent>AQAB</Exponent></RSAKeyValue></KeyValue><X509Data><X509Certificate>MIIB0TCCATqgAwIBAgIQSjEPt74hUY9O3c5sbKA+bzANBgkqhkiG9w0BAQUFADAnMSUwIwYDVQQDHhwAUwBTAEkARABPAE0AXAByAG0AYQB0AHQAbwBuMB4XDTE1MDIxOTIyNDYxNloXDTE2MDIyMDA0NDYxNlowJzElMCMGA1UEAx4cAFMAUwBJAEQATwBNAFwAcgBtAGEAdAB0AG8AbjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEArWI8RZL5iL6YO5aiD2f8+5Z2h/DeWBQgHiFGGjmg6qjOkoPSIrHo54ITHMGbVoAfuj0HDJeZpcMxFvcqUF2gqdWdeE+kiRTDWGQhC/HHpvI+cvxC6XMnkUYuoBChZW1znwSBtdcqEn8NDf2IeWqmlCDlCpa4VivUENu5khut6t0CAwEAATANBgkqhkiG9w0BAQUFAAOBgQCp7zt734rYYfZcbyJgmCPg0wB8ZNrYzV0vLj3HnvfQ4ZTC6v4ynjQ3+2jSlZZRufaElV11oV+IcAelIMC642C2DJckn6xXyJ+cW1bu6q8zvlVxDXu5rv7LQzpPmJUE8nE5E2XqQywxwGhmRoI5qzjxEn0GK7/aI6a4+vTUS/VXcQ==</X509Certificate></X509Data></KeyInfo></Signature></r:issuer></r:license></msrel:RelData></KeyInfo></Signature></asmv1:assembly>
