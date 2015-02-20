@@ -5,7 +5,7 @@ using System.Text;
 
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace MacroExtender.Formatting
+namespace MacroExtender
 {
     class InteractiveFormatting : MacroExtenderRibbon
     {

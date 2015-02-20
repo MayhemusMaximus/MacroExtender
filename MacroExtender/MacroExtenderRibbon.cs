@@ -157,16 +157,16 @@ namespace MacroExtender
 
         private void ExecuteMacroButton_Click(object sender, RibbonControlEventArgs e)
         {
-            //ApplicationEngine AppEngine = new ApplicationEngine();
+            ApplicationEngine AppEngine = new ApplicationEngine();
 
-            //for (int x = 0; x < MacrosList.Count; x++)
-            //{
-            //    if (MacrosList[x].MacroName == MacroSelectionComboBox.Text)
-            //        AppEngine.DelegationCheck(MacrosList[x].Scope, MacrosList[x].Row);
-            //}
+            for (int x = 0; x < MacrosList.Count; x++)
+            {
+                if (MacrosList[x].MacroName == MacroSelectionComboBox.Text)
+                    AppEngine.DelegationCheck(MacrosList[x].Scope, MacrosList[x].Row);
+            }
 
-            //MacroSelectionComboBox.Text = "";
-            //ExecuteMacroButtonEnabledState(false);
+            MacroSelectionComboBox.Text = "";
+            ExecuteMacroButtonEnabledState(false);
         }
 
         private void WorksheetSelectionCBox_TextChanged(object sender, RibbonControlEventArgs e)
@@ -194,14 +194,14 @@ namespace MacroExtender
 
         private void InsertMacrosSheetButton_Click(object sender, RibbonControlEventArgs e)
         {
-        //////    Template template = new Template();
-        //////    template.InsertMacrosSheet();
-        //////    OptionsButtonEnabledState(true);
+            Template template = new Template();
+            template.InsertMacrosSheet();
+            OptionsButtonEnabledState(true);
 
-        //////    APIEventsManager eventsManager = new APIEventsManager();
+            //APIEventsManager eventsManager = new APIEventsManager();
 
-        //////    //ExcelBase excelBase = new ExcelBase();
-        //////    Sheet.Change += new Excel.DocEvents_ChangeEventHandler(eventsManager.excelEvents_CellsChange);
+            //ExcelBase excelBase = new ExcelBase();
+            Sheet.Change += new Excel.DocEvents_ChangeEventHandler(excelEvents_CellsChange);
 
         }
 
@@ -561,13 +561,13 @@ namespace MacroExtender
             // SHOW UP IN THE WORKBOOK COUNT. IN ORDER TO GET AN ACCURE COUNT OF
             // WORKBOOKS THE USER IS WORKING IN THE FOREACH COUNTS THE XLSB FILES.
             int openXLSBCount = 0;
-            //////foreach (Excel.Workbook openWB in ExcelObj.Workbooks)
-            //////{
-            //////    if (stringCompare("xlsb", StringExt.Right(openWB.Name, 4))) // VBA PERSONAL FILES
-            //////    {
-            //////        openXLSBCount++;
-            //////    }
-            //////}
+            foreach (Excel.Workbook openWB in ExcelObj.Workbooks)
+            {
+                if (stringCompare("xlsb", StringExt.Right(openWB.Name, 4))) // VBA PERSONAL FILES
+                {
+                    openXLSBCount++;
+                }
+            }
 
             // AFTER GETTING THE XLSB COUNT SUBTRACT IT FROM THE WORKBOOK COUNT.
             // IF THE RESULT IS ONE THEN THE USER IS CLOSING THE LAST USER WORKBOOK
@@ -676,9 +676,9 @@ namespace MacroExtender
 
         public void ActiveSheet_SelectionChange(Excel.Range target)
         {
-            //////InteractiveFormatting interForm = new InteractiveFormatting();
-            //////lastSelectionColor = interForm.SelectionColor(target, lastSelection, lastSelectionColor);
-            //////lastSelection = target;
+            InteractiveFormatting interForm = new InteractiveFormatting();
+            lastSelectionColor = interForm.SelectionColor(target, lastSelection, lastSelectionColor);
+            lastSelection = target;
         }
 
         public void excelEvents_WorkbookNewSheet(Excel.Workbook wb, object sh)
@@ -732,8 +732,8 @@ namespace MacroExtender
                 MacroExtenderRibbon thisInstance = new MacroExtenderRibbon();
                 RefreshMacrosButtonEnabledState(true);
 
-                //////InteractiveFormatting interform = new InteractiveFormatting();
-                //////interform.delegateCell(target);
+                InteractiveFormatting interform = new InteractiveFormatting();
+                interform.delegateCell(target);
             }
         }
 

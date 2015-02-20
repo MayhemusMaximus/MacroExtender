@@ -5,7 +5,7 @@ using System.Text;
 
 using Excel = Microsoft.Office.Interop.Excel;
 
-namespace MacroExtender.Formatting
+namespace MacroExtender
 {
     /// <summary>
     /// MethodStruct contains formatting data pertaining to dealing with each method and its' arguments.

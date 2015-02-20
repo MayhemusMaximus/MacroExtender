@@ -176,6 +176,24 @@
     can be found.
   -->
   <ItemGroup>
+    <Compile Include="Engines\ApplicationEngine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Engines\EngineBase.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Engines\WorkbookEngine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Engines\WorksheetEngine.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formatting\InteractiveFormatting.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Formatting\MethodFormatting.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -206,6 +224,12 @@
     <Compile Include="MacroExtenderRibbon.Designer.cs">
       <DependentUpon>MacroExtenderRibbon.cs</DependentUpon>
     </Compile>
+    <Compile Include="StringExt.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Formatting\Template.cs">
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="ThisAddIn.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -217,9 +241,7 @@
     </Compile>
     <AppDesigner Include="Properties\" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Formatting\" />
-  </ItemGroup>
+  <ItemGroup />
   <!-- Include the build rules for a C# project. -->
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- Include additional build rules for an Office application add-in. -->
