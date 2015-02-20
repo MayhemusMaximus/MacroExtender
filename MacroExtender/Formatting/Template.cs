@@ -41,7 +41,7 @@ namespace MacroExtender
     class Template : MacroExtenderRibbon
     {
 
-        public void insertMacrosSheet()
+        public void InsertMacrosSheet()
         {
             Microsoft.Office.Interop.Excel.Range curCell;
 
