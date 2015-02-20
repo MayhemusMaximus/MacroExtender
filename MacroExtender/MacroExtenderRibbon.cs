@@ -179,19 +179,6 @@ namespace MacroExtender
             ExecuteMacroButtonEnabledState(true);
         }
 
-        //public void excelEvents_CellsChange(Excel.Range target)
-        //{
-        //    if (target.Worksheet.Name.Equals("Macros"))
-        //    {
-        //        // CODE FOR Macros SHEET INTERACTION GOES HERE.
-        //        MacroExtenderRibbon thisInstance = new MacroExtenderRibbon();
-        //        RefreshMacrosButtonEnabledState(true);
-
-        //        InteractiveFormatting interform = new InteractiveFormatting();
-        //        interform.delegateCell(target);
-        //    }
-        //}
-
         private void InsertMacrosSheetButton_Click(object sender, RibbonControlEventArgs e)
         {
             Template template = new Template();
@@ -391,7 +378,6 @@ namespace MacroExtender
 
         #region Helper Methods Region
 
-
         public void BuildMacroList()
         {
             MacrosList.Clear();
@@ -535,7 +521,7 @@ namespace MacroExtender
 
         #endregion // Helper Methods Region
 
-        #region
+        #region  // APIEvent Management
 
         private const int DISP_E_BADINDEX = unchecked((int)0x800200B);
 
@@ -738,5 +724,10 @@ namespace MacroExtender
         }
 
         #endregion
+
+        private void OptionsButton_Click(object sender, RibbonControlEventArgs e)
+        {
+            MessageBox.Show("There are no options at this time. Contact Ronnie Matton if there is an option you would like to have." );
+        }
     }
 }

@@ -87,6 +87,7 @@
             // 
             this.OptionsButton.Label = "Options";
             this.OptionsButton.Name = "OptionsButton";
+            this.OptionsButton.Click += new Microsoft.Office.Tools.Ribbon.RibbonControlEventHandler(this.OptionsButton_Click);
             // 
             // InsertMacrosSheetButton
             // 
