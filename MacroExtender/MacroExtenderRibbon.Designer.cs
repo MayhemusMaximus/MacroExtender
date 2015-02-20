@@ -122,7 +122,7 @@
 
     partial class ThisRibbonCollection
     {
-        internal MacroExtenderRibbon Ribbon1
+        internal MacroExtenderRibbon MacroExtenderRibbon
         {
             get { return this.GetRibbon<MacroExtenderRibbon>(); }
         }
