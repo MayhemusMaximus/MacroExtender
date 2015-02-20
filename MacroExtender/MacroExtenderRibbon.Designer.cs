@@ -36,12 +36,12 @@
         {
             this.tab1 = this.Factory.CreateRibbonTab();
             this.MacroExtenderGroup = this.Factory.CreateRibbonGroup();
-            this.ExecuteMacroButton = this.Factory.CreateRibbonButton();
-            this.InsertMacrosSheetButton = this.Factory.CreateRibbonButton();
-            this.OptionsButton = this.Factory.CreateRibbonButton();
-            this.RefreshMacrosButton = this.Factory.CreateRibbonButton();
             this.ScopeSelectionComboBox = this.Factory.CreateRibbonComboBox();
             this.MacroSelectionComboBox = this.Factory.CreateRibbonComboBox();
+            this.ExecuteMacroButton = this.Factory.CreateRibbonButton();
+            this.OptionsButton = this.Factory.CreateRibbonButton();
+            this.InsertMacrosSheetButton = this.Factory.CreateRibbonButton();
+            this.RefreshMacrosButton = this.Factory.CreateRibbonButton();
             this.tab1.SuspendLayout();
             this.MacroExtenderGroup.SuspendLayout();
             // 
@@ -63,42 +63,44 @@
             this.MacroExtenderGroup.Label = "Macro Extender";
             this.MacroExtenderGroup.Name = "MacroExtenderGroup";
             // 
+            // ScopeSelectionComboBox
+            // 
+            this.ScopeSelectionComboBox.Label = "Scope:";
+            this.ScopeSelectionComboBox.Name = "ScopeSelectionComboBox";
+            this.ScopeSelectionComboBox.Text = null;
+            // 
+            // MacroSelectionComboBox
+            // 
+            this.MacroSelectionComboBox.Label = "Macro:";
+            this.MacroSelectionComboBox.Name = "MacroSelectionComboBox";
+            this.MacroSelectionComboBox.Text = null;
+            // 
             // ExecuteMacroButton
             // 
             this.ExecuteMacroButton.Label = "             Execute Macro     ";
             this.ExecuteMacroButton.Name = "ExecuteMacroButton";
-            // 
-            // InsertMacrosSheetButton
-            // 
-            this.InsertMacrosSheetButton.Label = "Insert Macros Sheet";
-            this.InsertMacrosSheetButton.Name = "InsertMacrosSheetButton";
             // 
             // OptionsButton
             // 
             this.OptionsButton.Label = "Options";
             this.OptionsButton.Name = "OptionsButton";
             // 
+            // InsertMacrosSheetButton
+            // 
+            this.InsertMacrosSheetButton.Label = "Insert Macros Sheet";
+            this.InsertMacrosSheetButton.Name = "InsertMacrosSheetButton";
+            // 
             // RefreshMacrosButton
             // 
             this.RefreshMacrosButton.Label = "Refresh Macros";
             this.RefreshMacrosButton.Name = "RefreshMacrosButton";
-            // 
-            // ScopeSelectionComboBox
-            // 
-            this.ScopeSelectionComboBox.Label = "Scope:";
-            this.ScopeSelectionComboBox.Name = "ScopeSelectionComboBox";
-            // 
-            // MacroSelectionComboBox
-            // 
-            this.MacroSelectionComboBox.Label = "Macro:";
-            this.MacroSelectionComboBox.Name = "MacroSelectionComboBox";
             // 
             // MacroExtenderRibbon
             // 
             this.Name = "MacroExtenderRibbon";
             this.RibbonType = "Microsoft.Excel.Workbook";
             this.Tabs.Add(this.tab1);
-            this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.Ribbon1_Load);
+            this.Load += new Microsoft.Office.Tools.Ribbon.RibbonUIEventHandler(this.MacroExtenderRibbon_Load);
             this.tab1.ResumeLayout(false);
             this.tab1.PerformLayout();
             this.MacroExtenderGroup.ResumeLayout(false);
